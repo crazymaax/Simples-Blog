@@ -65,7 +65,7 @@ export class User {
             form.appendChild(message)
 
             setTimeout(() => {
-                window.location = "../../index.html"
+                window.location = "../../Simples-Blog/index.html" /* /Simples-Blog/ adicionado para evitar bugs no github */
             }, 3000);
 
         }
@@ -94,12 +94,7 @@ export class User {
             "headers": {
                 "Content-Type": "application/json"
             },
-            "body": JSON.stringify(loginData
-                /* {
-                    "email": "miawDino1@mail.com",
-                    "password": "miawDino!"
-                } */
-            )
+            "body": JSON.stringify(loginData)
         })
 
         const data = await response.json()
@@ -115,7 +110,7 @@ export class User {
 
             window.localStorage.setItem("userData", userDataJSON)
 
-            window.location = "../../posts.html"
+            window.location = "../../Simples-Blog/posts.html" /* /Simples-Blog/ adicionado para evitar bugs no github */
 
         } else {
 
@@ -161,92 +156,5 @@ export class User {
 
         window.location = "../../index.html"
     }
-
-    /* static toRegisterPage() {
-        const body = document.querySelector(".blogBody");
-        body.innerHTML = `
-        <header>
-            <h1>Cadastro</h1>
-        </header>
-
-        <main>
-
-        <form action="" class="registerForm">
-            <label for="username">
-                <input type="text" name="username" placeholder="Nome de usuário" class="form__username">
-            </label>
-
-            <label for="email">
-                <input type="email" name="email" placeholder="Email" class="form__email">
-            </label>
-
-            <label for="image">
-                <input type="text" name="avatarUrl" placeholder="Foto de perfil(url)" class="form__image">
-            </label>
-
-            <label for="password">
-                <input type="password" name="password" placeholder="Senha" class="form__password">
-            </label>
-
-            <button class="form_registerButton">Cadastrar</button>
-
-        </form>
-
-        <a href="./index.html">Voltar</a>
-        </main>
-        `
-
-        const register = document.querySelector(".registerForm")
-        register.addEventListener("submit", User.register)
-    } */
-
-    /* static toPostPage() {
-        const body = document.querySelector(".blogBody");
-
-        const { infos: { avatarUrl, createdAt, email, id, username } } = User.infoUser
-
-        console.log(avatarUrl)
-        console.log(createdAt)
-        console.log(email)
-        console.log(id)
-        console.log(username)
-
-        body.innerHTML = `
-        <header class="blogHeader">
-            <figure>
-                <img src="${avatarUrl}" alt="Sua foto de Perfil">
-                <figcaption>Sua foto de perfil</figcaption>
-            </figure>
-            <h3>${username}</h3>
-            <button class="logoutButton">Logout</button>
-        </header>
-
-        <div class="createAPost">
-            <form action="#">
-                <textarea name="post" cols="30" rows="10" placeholder="Comece seu post incrível!"></textarea>
-                <button class="postButton">+</button>
-            </form>
-        </div>
-
-        <div class="posts">
-        </div>
-        `
-
-
-        const logout = document.querySelector(".logoutButton")
-        logout.addEventListener("click", User.logout)
-
-        const postPost = document.querySelector(".postButton")
-        postPost.addEventListener("click", (e) => {
-            e.preventDefault()
-            const text = e.target.parentNode[0].value
-
-            const ApiValue = { content: text }
-
-            Post.createPost(ApiValue)
-        })
-
-    } */
-
 
 }
