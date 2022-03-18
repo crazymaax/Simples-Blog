@@ -154,7 +154,7 @@ export class User {
         window.localStorage.removeItem("userData")
         window.localStorage.removeItem("loginData")
 
-        window.location = "../../index.html"
+        window.location = "../../Simples-Blog/index.html" /* /Simples-Blog/ adicionado para evitar bugs no github */
     }
 
 }
