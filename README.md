@@ -23,6 +23,8 @@ Blog criado utilizando uma API criada por <a href="https://kenzie.com.br/">Kenzi
 Como se trata de uma API para treinamento, e como a instituição possui diversos alunos, o sistema onde armazena os dados detém de uma grande quantidade de usuários e posts com a finalidade de apenas testar a aplicação, ou seja, são usuários e posts com conteúdo aleatório.  
 Desta forma foi listado apenas três posts criados para o propósito de demonstração do site.
 
+- Clique <a href="https://crazymaax.github.io/Simples-Blog/">aqui</a> para acessar o blog.
+
 ##
 > **Bugs conhecidos:** Data de criação do post - *Problema diretamente da API, onde a mesma não sincroniza a data de quando o post é feito, portanto ele sempre irá exibir a mesma data.*\
 Erros no login e registro - *A API requer que o usuário apenas logue com o email e senha, além de que a API não retorna erros diferentes para cada tipo, dificultando o trabalho do Front-End.*
