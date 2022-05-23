@@ -2,6 +2,8 @@
 
 Site simples que simula um blog onde é necessário fazer um registro e posteriormente um login.
 
+## API FORA DO AR, SITE IMPOSSIBILITADO DE REALIZAR LOGIN E REGISTRO 😢
+
 <div align="center">
         
   **Tela de login**\
